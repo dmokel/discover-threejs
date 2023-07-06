@@ -1,0 +1,22 @@
+{
+  "name": "demo-threejs",
+  "private": true,
+  "version": "1.0.0",
+  "author": "David Mokel",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "packageManager": "pnpm@7.29.3",
+  "dependencies": {
+    "three": "^0.154.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.152.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.0"
+  }
+}
