@@ -1,9 +1,9 @@
 import { PerspectiveCamera, Scene, WebGLRenderer } from 'three';
 import { createCamera } from './components/camera.js';
-import { createCube } from './components/cube.js';
 import { createLights } from './components/light.js';
 import { createScene } from './components/scene.js';
 
+import { createMeshGroup } from './components/meshGroup.js';
 import { Loop } from './systems/Loop.js';
 import { Resizer } from './systems/Resizer.js';
 import { createControls } from './systems/controls.js';
@@ -25,14 +25,14 @@ class World {
 
     this.loop = new Loop(this.scene, this.camera, this.renderer);
 
-    const cube = createCube();
+    const meshGroup = createMeshGroup();
     const { mainLight, ambientLight, hemisphereLight } = createLights();
-    this.scene.add(cube, hemisphereLight);
-    this.loop.updatables.push(cube);
+    this.scene.add(meshGroup, hemisphereLight);
+    this.loop.updatables.push(meshGroup);
 
     const controls = createControls(this.camera, this.renderer.domElement);
+    controls.target.copy(meshGroup.position);
     controls.enableDamping = true;
-    controls.target.copy(cube.position);
     this.loop.updatables.push(controls);
 
     new Resizer(container, this.camera, this.renderer);
