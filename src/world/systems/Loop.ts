@@ -1,6 +1,6 @@
 import { Clock, PerspectiveCamera, Scene, WebGLRenderer } from 'three';
 
-// Define interface on the usage side,
+// Define interface on the usage side
 export interface IUpdatables {
   /**
    * @param delta delta in seconds
