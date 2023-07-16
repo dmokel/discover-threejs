@@ -2,7 +2,7 @@ import { PerspectiveCamera } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { IUpdatables } from './Loop';
 
-class CusOrbitControls extends OrbitControls implements IUpdatables {
+export class CusOrbitControls extends OrbitControls implements IUpdatables {
   constructor(camera: PerspectiveCamera, canvas: HTMLCanvasElement) {
     super(camera, canvas);
   }
