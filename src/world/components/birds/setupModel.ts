@@ -22,7 +22,7 @@ function setupModel(data: GLTF) {
 
   model.tick = (delta: number) => {
     mixer.update(delta);
-    model.rotation.z -= delta * r;
+    // model.rotation.z -= delta * r;
   };
 
   return model;

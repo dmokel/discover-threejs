@@ -12,12 +12,15 @@ async function loadBirds() {
 
   const parrot = setupModel(parrotData);
   parrot.position.set(0, 0, 2.5);
+  parrot.scale.set(0.03, 0.03, 0.03);
 
   const flamingo = setupModel(flamingoData);
   flamingo.position.set(7.5, 0, -10);
+  flamingo.scale.set(0.03, 0.03, 0.03);
 
   const stork = setupModel(storkData);
   stork.position.set(0, -2.5, -10);
+  stork.scale.set(0.03, 0.03, 0.03);
 
   return { parrot, flamingo, stork };
 }
